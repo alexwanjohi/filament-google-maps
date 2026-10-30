@@ -1,4 +1,4 @@
-import { setOptions, importLibrary } from "@googlemaps/js-api-loader";
+import { importLibrary } from "@googlemaps/js-api-loader";
 
 export default function filamentGoogleMapsField(
     {
@@ -48,7 +48,6 @@ export default function filamentGoogleMapsField(
         },
 
         async createMap() {
-            setOptions({ key: apiKey })
             const {Map} = await importLibrary("maps");
             const {PlacesService} = await importLibrary("places");
             const {AdvancedMarkerElement} = await importLibrary("marker");
